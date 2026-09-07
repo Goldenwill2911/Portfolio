@@ -26,7 +26,7 @@ export const socialLinks: SocialLink[] = [
     icon: "github",
   },
   {
-    href: "https://linkedin.com/in/agustine-gonzalez-6065a2427",
+    href: "https://www.linkedin.com/in/agustine-gonzalez-6065aa427/",
     label: "LinkedIn",
     icon: "linkedin",
   },

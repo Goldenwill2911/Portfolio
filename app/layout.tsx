@@ -25,7 +25,7 @@ const siteFont = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Ricky Serrano | Portfolio",
+  title: "Agustine Gonzalez | Portfolio",
   description: "A minimal portfolio with selected work, writing, and contact.",
 };
 
