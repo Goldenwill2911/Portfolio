@@ -14,6 +14,15 @@ type SkillIconConfig = {
 const devicon = (fileName: string) => `/skills/devicon-v2.17.0/${fileName}`;
 
 const skillIcons: Record<string, SkillIconConfig> = {
+  Python: {
+    src: devicon("python-original.svg"),
+  },
+  "C#": {
+    src: devicon("csharp-original.svg"),
+  },
+  ".net": {
+    src: devicon("net-original.svg"),
+  },
   TypeScript: {
     src: devicon("typescript-original.svg"),
   },
@@ -23,29 +32,14 @@ const skillIcons: Record<string, SkillIconConfig> = {
   Java: {
     src: devicon("java-original.svg"),
   },
-  HTML: {
-    src: devicon("html5-original.svg"),
-  },
-  CSS: {
-    src: devicon("css3-original.svg"),
-  },
   "HTML & CSS": {
     srcs: [
       devicon("html5-original.svg"),
       devicon("css3-original.svg"),
     ],
   },
-  Python: {
-    src: devicon("python-original.svg"),
-  },
-  "C#": {
-    src: devicon("csharp-original.svg"),
-  },
   "Spring Boot": {
     src: devicon("spring-original.svg"),
-  },
-  Angular: {
-    src: devicon("angularjs-original.svg"),
   },
   React: {
     src: devicon("react-original.svg"),
@@ -65,6 +59,9 @@ const skillIcons: Record<string, SkillIconConfig> = {
   PostgreSQL: {
     src: devicon("postgresql-original.svg"),
   },
+  Azure: {
+    src: devicon("microsoft-azure-svgrepo-com.svg"),
+  },
   Git: {
     src: devicon("git-original.svg"),
   },
@@ -82,9 +79,6 @@ const skillIcons: Record<string, SkillIconConfig> = {
   },
   Linux: {
     src: devicon("linux-original.svg"),
-  },
-  Windows: {
-    src: devicon("windows11-original.svg"),
   },
   "Active Directory": {
     src: devicon("azure-original.svg"),

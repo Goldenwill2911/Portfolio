@@ -4,7 +4,7 @@ import { Resend } from "resend";
 export const runtime = "nodejs";
 
 function hasControlChars(value: string) {
-  return /[\r\n\0]/.test(value);
+  return /[\r\0]/.test(value);
 }
 
 function isValidEmail(email: string) {
@@ -53,22 +53,22 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const website = String(body.website ?? "").trim();
-    if (website) {
-      return NextResponse.json({ ok: true });
-    }
+    // const website = String(body.website ?? "").trim();
+    // if (website) {
+    //   return NextResponse.json({ ok: true });
+    // }
 
     const name = String(body.name ?? "").trim();
     const email = String(body.email ?? "").trim();
     const message = String(body.message ?? "").trim();
-    const turnstileToken = String(body.turnstileToken ?? "").trim();
+    // const turnstileToken = String(body.turnstileToken ?? "").trim();
 
-    if (!turnstileToken) {
-      return NextResponse.json(
-        { error: "Please complete the verification." },
-        { status: 400 },
-      );
-    }
+    // if (!turnstileToken) {
+    //   return NextResponse.json(
+    //     { error: "Please complete the verification." },
+    //     { status: 400 },
+    //   );
+    // }
 
     if (
       hasControlChars(name) ||
@@ -99,13 +99,13 @@ export async function POST(req: Request) {
       );
     }
 
-    const turnstile = await verifyTurnstile(turnstileToken, getClientIp(req));
-    if (!turnstile.ok) {
-      return NextResponse.json(
-        { error: turnstile.error },
-        { status: 403 },
-      );
-    }
+    // const turnstile = await verifyTurnstile(turnstileToken, getClientIp(req));
+    // if (!turnstile.ok) {
+    //   return NextResponse.json(
+    //     { error: turnstile.error },
+    //     { status: 403 },
+    //   );
+    // }
 
     const to = process.env.CONTACT_TO_EMAIL;
     const from = process.env.CONTACT_FROM_EMAIL;

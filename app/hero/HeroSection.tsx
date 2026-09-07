@@ -24,7 +24,7 @@ export default function HeroSection({
       <div className="hero-layout">
         <div className="flex flex-col gap-6">
           <h1 className="font-display text-[2rem] font-semibold leading-[1.08] tracking-tight text-[color:var(--fg)] sm:text-6xl sm:leading-none">
-            Hi, I&apos;m Ricky,
+            Hi, I&apos;m Agustine,
             <br />
             <TypewriterText className="inline-flex items-center" words={words} />
           </h1>
@@ -60,7 +60,7 @@ export default function HeroSection({
           <div className="relative aspect-square w-full max-w-[180px] overflow-hidden rounded-full border border-[color:var(--border)] bg-[color:var(--panel-strong)] shadow-[0_24px_50px_-42px_rgba(10,12,16,0.7)] sm:max-w-[220px]">
             <Image
               src="/me/headshot.jpg"
-              alt="Headshot of Ricky Serrano"
+              alt="Headshot of Agustine Gonzalez"
               fill
               priority
               sizes="200px"
@@ -69,9 +69,9 @@ export default function HeroSection({
           </div>
         </div>
         <a
-          href="https://github.com/RickySerrano904"
+          href="https://github.com/GoldenWill2911"
           className="github-calendar-card hero-calendar group block w-full max-w-2xl rounded-2xl border border-[color:var(--calendar-border)] bg-[color:var(--calendar-bg)] p-3 shadow-[0_24px_60px_-40px_rgba(10,12,16,0.4)] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-[color:var(--accent)] hover:shadow-[0_24px_70px_-38px_rgba(10,12,16,0.5),0_0_34px_-18px_var(--accent)] focus-visible:-translate-y-0.5 focus-visible:border-[color:var(--accent)] focus-visible:outline-none focus-visible:shadow-[0_0_0_3px_var(--bg),0_24px_70px_-38px_rgba(10,12,16,0.5),0_0_34px_-18px_var(--accent)] sm:rounded-3xl sm:p-4"
-          aria-label="View RickySerrano904 on GitHub"
+          aria-label="View Augustine on Github"
         >
           <div className="mb-3 flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
             <h2 className="github-calendar-title text-xs font-semibold uppercase tracking-[0.14em] transition-colors duration-300 sm:text-sm sm:tracking-[0.2em]">
@@ -81,14 +81,6 @@ export default function HeroSection({
               View profile{" "}
               <ArrowRightIcon className="github-calendar-arrow h-3.5 w-3.5 transition-transform duration-300" />
             </span>
-          </div>
-          <div className="overflow-x-auto">
-            <img
-              src="https://ghchart.rshah.org/397ba4/RickySerrano904"
-              alt="GitHub contribution calendar for RickySerrano904"
-              className="h-auto w-full transition-[filter,opacity] duration-300 group-hover:brightness-110 group-hover:contrast-110 group-hover:saturate-125"
-              fetchPriority="high"
-            />
           </div>
         </a>
       </div>

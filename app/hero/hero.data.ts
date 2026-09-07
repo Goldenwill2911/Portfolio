@@ -7,34 +7,27 @@ export type SocialLink = {
 };
 
 export const heroWords = [
-  "Systems Builder",
+  "AI Automation Engineer",
   "Software Developer",
-  "IT Professional",
-  "US Navy Veteran",
-  "Problem Solver",
-  "Technology Enthusiast",
-  "Digital Creator",
+  "Full stack Engineer",
+  "Agentic Systems, Azure",
+  ".NET & API integration",
 ];
 
 export const heroDescription =
-  "Bringing ideas to life through code, with a focus on practical, user-friendly designs.";
+  "Fire is the test of gold; adversity, of strong men!";
 
-export const heroLocation = "Jacksonville, Florida";
+export const heroLocation = "Stockton, CA";
 
 export const socialLinks: SocialLink[] = [
   {
-    href: "https://github.com/RickySerrano904",
+    href: "https://github.com/GoldenWill2911",
     label: "GitHub",
     icon: "github",
   },
   {
-    href: "https://linkedin.com/in/rickyserrano904",
+    href: "https://linkedin.com/in/agustine-gonzalez-6065a2427",
     label: "LinkedIn",
     icon: "linkedin",
-  },
-  {
-    href: "https://ko-fi.com/Rickyserrano904",
-    label: "Ko-fi",
-    icon: "kofi",
   },
 ];

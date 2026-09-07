@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
+// import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
 type SendState = "idle" | "sending" | "sent" | "error";
 
@@ -14,34 +14,34 @@ export default function ContactForm({ nonce }: ContactFormProps) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [website, setWebsite] = useState("");
-  const [turnstileToken, setTurnstileToken] = useState("");
-  const [shouldLoadTurnstile, setShouldLoadTurnstile] = useState(false);
-  const [useCompactTurnstile, setUseCompactTurnstile] = useState(false);
+  // const [turnstileToken, setTurnstileToken] = useState("");
+  // const [shouldLoadTurnstile, setShouldLoadTurnstile] = useState(false);
+  // const [useCompactTurnstile, setUseCompactTurnstile] = useState(false);
   const [sendState, setSendState] = useState<SendState>("idle");
   const [statusMessage, setStatusMessage] = useState("");
-  const turnstileRef = useRef<TurnstileInstance>(null);
+  // const turnstileRef = useRef<TurnstileInstance>(null);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 480px)");
-    const syncTurnstileSize = () => setUseCompactTurnstile(mediaQuery.matches);
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia("(max-width: 480px)");
+  //   const syncTurnstileSize = () => setUseCompactTurnstile(mediaQuery.matches);
 
-    syncTurnstileSize();
-    mediaQuery.addEventListener("change", syncTurnstileSize);
+  //   syncTurnstileSize();
+  //   mediaQuery.addEventListener("change", syncTurnstileSize);
 
-    return () => mediaQuery.removeEventListener("change", syncTurnstileSize);
-  }, []);
+  //   return () => mediaQuery.removeEventListener("change", syncTurnstileSize);
+  // }, []);
 
   const canSubmit = useMemo(() => {
     return (
       sendState !== "sending" &&
       name.trim().length >= 2 &&
       email.trim().includes("@") &&
-      message.trim().length >= 20 &&
-      !!turnstileToken
+      message.trim().length >= 20
+      // !!turnstileToken
     );
-  }, [email, message, name, sendState, turnstileToken]);
+  }, [email, message, name, sendState]);
 
-  const enableTurnstile = () => setShouldLoadTurnstile(true);
+  // const enableTurnstile = () => setShouldLoadTurnstile(true);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -57,7 +57,6 @@ export default function ContactForm({ nonce }: ContactFormProps) {
           email,
           message,
           website,
-          turnstileToken,
         }),
       });
 
@@ -67,8 +66,8 @@ export default function ContactForm({ nonce }: ContactFormProps) {
         };
         setSendState("error");
         setStatusMessage(data.error ?? "Failed to send message.");
-        setTurnstileToken("");
-        turnstileRef.current?.reset();
+        // setTurnstileToken("");
+        // turnstileRef.current?.reset();
         return;
       }
 
@@ -76,20 +75,20 @@ export default function ContactForm({ nonce }: ContactFormProps) {
       setEmail("");
       setMessage("");
       setWebsite("");
-      setTurnstileToken("");
-      turnstileRef.current?.reset();
+      // setTurnstileToken("");
+      // turnstileRef.current?.reset();
       setSendState("sent");
       setStatusMessage("Message sent! I will get back to you as soon as possible.");
     } catch {
-      setTurnstileToken("");
-      turnstileRef.current?.reset();
+      // setTurnstileToken("");
+      // turnstileRef.current?.reset();
       setSendState("error");
       setStatusMessage("Something went wrong. Please try again.");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} onFocus={enableTurnstile} className="grid gap-5">
+    <form onSubmit={handleSubmit} className="grid gap-5">
       <input
         value={website}
         onChange={(event) => setWebsite(event.target.value)}
@@ -150,7 +149,7 @@ export default function ContactForm({ nonce }: ContactFormProps) {
         </span>
       </label>
 
-      {shouldLoadTurnstile ? (
+      {/* {shouldLoadTurnstile ? (
         <div className="grid gap-2">
           <div className="relative isolate rounded-2xl border border-[color:var(--border)] bg-transparent p-3">
             <div className="w-full min-w-0 overflow-hidden">
@@ -158,9 +157,9 @@ export default function ContactForm({ nonce }: ContactFormProps) {
                 <Turnstile
                   ref={turnstileRef}
                   siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
-                  onSuccess={(token) => setTurnstileToken(token)}
-                  onExpire={() => setTurnstileToken("")}
-                  onError={() => setTurnstileToken("")}
+                  // onSuccess={(token) => setTurnstileToken(token)}
+                  // onExpire={() => setTurnstileToken("")}
+                  // onError={() => setTurnstileToken("")}
                   scriptOptions={{ nonce }}
                   options={{
                     theme: "auto",
@@ -170,14 +169,16 @@ export default function ContactForm({ nonce }: ContactFormProps) {
               </div>
             </div>
           </div>
-          <span className="text-xs font-normal text-[color:var(--muted)]">
+    
+          
+        </div>
+      ) : null} */}
+
+          {/* <span className="text-xs font-normal text-[color:var(--muted)]">
             {turnstileToken
               ? "Human verification complete."
               : "Complete the verification to enable sending."}
-          </span>
-        </div>
-      ) : null}
-
+          </span> */}
       {statusMessage && (
         <p
           className={`rounded-2xl border px-4 py-3 text-sm ${

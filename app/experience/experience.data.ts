@@ -21,9 +21,9 @@ export type Role = {
 
 export const education: EducationItem[] = [
   {
-    program: "B.A.S. Information Systems Technology",
-    school: "Florida State College at Jacksonville",
-    period: "2023 - 2026",
+    program: "Bachelor of Computer Science",
+    school: "university of California, Los Angeles",
+    period: "2017 - 2021",
     points: [
       "Graduated magna cum laude with a 3.78/4.00 GPA.",
       "Completed coursework in application development, systems design, database management, networking, and cyber security.",
@@ -48,9 +48,9 @@ export const certifications: Certification[] = [
 
 export const roles: Role[] = [
   {
-    title: "IT Help Desk Technician",
-    company: "Natural Life",
-    period: "Sep 2025 - Present",
+    title: "AI Automation Engineer",
+    company: "Upwork",
+    period: "June 2026 - Present",
     points: [
       "Provided technical support for workstation, phone, printer, and network issues, including hardware troubleshooting, software support, and device maintenance.",
       "Installed and maintained IT infrastructure including network cabling, workstation deployments, charging stations, surveillance systems, and other supported devices.",
@@ -58,43 +58,36 @@ export const roles: Role[] = [
     ],
   },
   {
-    title: "IT Service Desk Technician",
-    company: "Wounded Warrior Project",
-    period: "Jun 2025 - Sep 2025",
+    title: "Software Engineer | AI Automation Solutions",
+    company: "Tekyz Inc",
+    period: "January 2024 – June 2026",
     points: [
-      "Resolved hardware, software, and network issues through service desk ticket workflows.",
-      "Managed user accounts, password resets, group permissions, and access requests through Active Directory.",
-      "Handled endpoint deployment, lifecycle management, and secure decommissioning.",
+      "Built and maintained scalable ASP.NET Core applications and REST APIs.",
+      "Designed integrations between business applications, third-party services, and cloud platforms.",
+      "Integrated Azure OpenAI and LLM capabilities into business processes to enable intelligent automation.",
+      "Worked with modern software engineering practices including API design, database optimization, and cloud deployment.",
     ],
   },
   {
-    title: "Co-Owner / Operator",
-    company: "ProJax Pressure Washing, LLC",
-    period: "Jan 2024 - May 2025",
+    title: "Web Developer",
+    company: "Saritasa",
+    period: "July 2020 – November 2023",
     points: [
-      "Managed service delivery and client relationships for 200+ residential and commercial customers.",
-      "Oversaw budgeting, scheduling, and day-to-day resource management.",
-      "Designed efficient workflows that reduced job time and improved consistency.",
+      "Developed web applications using ASP.NET Core, C#, JavaScript/TypeScript, and modern frontend frameworks.",
+      "Designed and implemented RESTful APIs and database-driven applications.",
+      "Integrated external APIs and third-party systems to support business workflows.",
+      "Improved application performance, reliability, and maintainability through clean coding practices.",
+      "Collaborated with cross-functional teams to deliver scalable software solutions.",
     ],
   },
   {
-    title: "Parts Sales Manager",
-    company: "AutoZone",
-    period: "May 2023 - Dec 2023",
+    title: "Software Development Intern ",
+    company: "Saritasa",
+    period: "January 2020 – June 2020",
     points: [
-      "Managed store inventory, customer orders, and incoming product shipments.",
-      "Used internal systems to process sales and maintain customer records.",
-      "Executed opening and closing procedures, including daily cash reconciliation.",
-    ],
-  },
-  {
-    title: "Aviation Structural Mechanic",
-    company: "US Navy",
-    period: "Dec 2016 - Nov 2022",
-    points: [
-      "Managed aircraft records and maintenance repair data.",
-      "Led and qualified a team of 25 sailors through maintenance inspections.",
-      "Supported aircraft launch and recovery operations in high-tempo environments.",
+      "Assisted in developing web applications using .NET technologies.",
+      "Created and maintained application components and database operations.",
+      "Participated in code reviews, testing, and software improvement tasks.",
     ],
   },
 ];

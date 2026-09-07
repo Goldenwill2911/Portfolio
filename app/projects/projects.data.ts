@@ -29,15 +29,6 @@ export const projects: Project[] = [
     thumbnailAlt: "Enzo's World home page in dark mode",
   },
   {
-    slug: "portfolio",
-    title: "Portfolio Website",
-    summary: "A responsive portfolio website showcasing my projects, experience, and skills as a software developer.",
-    tags: ["Next.js", "React", "TypeScript", "MDX"],
-    marqueeThumbnailSrc: "/projects/portfolio-project/portfolio-marquee.png",
-    thumbnailSrc: "/projects/portfolio-project/portfolio-screenshot.jpg",
-    thumbnailAlt: "Screenshot of portfolio homepage",
-  },
-  {
     slug: "editing-station-pc",
     title: "Fractal North Editing PC",
     summary: "A custom-built PC optimized for video editing workloads, featuring a high-performance CPU, GPU, and fast storage to handle large media files and complex timelines.",
