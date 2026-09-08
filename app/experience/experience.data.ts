@@ -25,7 +25,6 @@ export const education: EducationItem[] = [
     school: "university of California, Los Angeles",
     period: "2017 - 2021",
     points: [
-      "Graduated magna cum laude with a 3.78/4.00 GPA.",
       "Completed coursework in application development, systems design, database management, networking, and cyber security.",
       "Gained hands-on experience with IT infrastructure, configuring and maintaining servers and network devices.",
       "Worked with a team to design and build full-stack application projects, applying agile development practices and version control workflows.",
@@ -36,10 +35,9 @@ export const education: EducationItem[] = [
 export const certifications: Certification[] = [
   {
     issuer: "CompTIA",
-    name: "A+",
-    period: "2024",
+    name: "Network Server Security - Protecting the Server and Client Computers",
+    period: "2026",
     points: [
-      "Demonstrates foundational knowledge of computer hardware, operating systems, and networking.",
       "Validates troubleshooting skills for supporting end users and IT environments.",
       "Reinforces strong practices in endpoint support, OS installation, hardware diagnostics, and technical documentation.",
     ],

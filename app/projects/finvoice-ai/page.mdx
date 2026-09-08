@@ -1,0 +1,72 @@
+import ProjectCaseStudyLayout from "@/app/projects/ProjectCaseStudyLayout";
+import ScreenshotGallery from "@/app/projects/ScreenshotGallery";
+
+<ProjectCaseStudyLayout
+  eyebrow="AI + Finance Automation"
+  title="Finvoice AI"
+  summary="An AI-powered invoicing platform that turns plain-text notes into structured invoices, generates payment reminders, tracks payment status, and presents revenue insights through a clear financial dashboard."
+  problem="Freelancers and small businesses often manage invoices through disconnected notes, spreadsheets, and manual follow-ups. Creating accurate invoices takes time, overdue payments are easy to miss, and financial performance can be difficult to understand at a glance."
+  solution="Finvoice AI brings invoice creation, payment tracking, revenue insights, and follow-up communication into one focused workspace. Gemini AI converts unstructured notes into editable invoice data and helps users prepare professional payment reminders without starting from a blank page."
+  imageSrc="/projects/finvoice-ai/screen-01.png"
+  imageAlt="Finvoice AI invoicing and financial dashboard"
+>
+
+Finvoice AI is a full-stack invoicing application designed for freelancers and small businesses. It combines everyday invoice management with focused AI assistance, helping users move from informal billing notes to organized invoices, payment follow-ups, and clearer financial visibility.
+
+## Screenshots
+
+<ScreenshotGallery
+  items={[
+    {
+      title: "Financial Dashboard",
+      src: "/projects/finvoice-ai/screen-01.png",
+      alt: "Finvoice AI dashboard showing invoice status and revenue insights",
+    },
+    {
+      title: "Create Invoice",
+      src: "/projects/finvoice-ai/screen-02.png",
+      alt: "Finvoice AI form for creating and editing an invoice",
+    },
+    {
+      title: "AI Invoice Generation",
+      src: "/projects/finvoice-ai/screen-03.png",
+      alt: "Finvoice AI converting plain-text billing notes into a structured invoice",
+    },
+    {
+      title: "Payment Reminder",
+      src: "/projects/finvoice-ai/screen-04.png",
+      alt: "Finvoice AI interface for generating a payment reminder email",
+    },
+  ]}
+/>
+
+## Core Features
+
+- AI-assisted invoice generation that transforms plain-text emails, notes, or messages into structured invoice fields.
+- Invoice creation, editing, deletion, filtering, and PDF export from a centralized workspace.
+- Paid and unpaid status tracking with dashboard summaries for revenue and outstanding payments.
+- AI-generated payment reminder emails that users can review and adapt before sending.
+- Reusable business profile information for faster and more consistent invoice creation.
+- Secure account registration and sign-in with protected application routes.
+- Responsive dashboard interface with light and dark presentation support.
+
+## Architecture and Stack
+
+- **Architecture:** Full-stack MERN application with a separate React client, Express API, and persistent MongoDB data layer.
+- **Frontend:** React, Vite, Tailwind CSS, and Axios for the responsive dashboard and invoice workflows.
+- **Backend:** Node.js and Express.js with dedicated authentication, invoice, and AI routes.
+- **Database:** MongoDB Atlas for user profiles, business information, and invoice records.
+- **AI Integration:** Google Gemini for converting unstructured billing text into invoice data and generating payment-reminder content.
+- **Authentication:** JWT-based sessions with bcrypt password hashing and protected routes.
+- **Build and Delivery:** Docker Compose, environment-based configuration, GitHub Actions CI/CD, and Jest tests for core backend behavior.
+
+## Key Product and UX Decisions
+
+- A dashboard-first experience gives users an immediate view of revenue, unpaid invoices, and recent activity.
+- AI is placed inside specific billing tasks, keeping the workflow predictable and easier to review.
+- Generated invoice details remain editable so users stay in control before saving or exporting a document.
+- Clear payment-status labels and filtering reduce the effort required to locate overdue or completed invoices.
+- Reusable profile data prevents users from repeatedly entering the same business information.
+- Focused forms, consistent navigation, responsive layouts, and dark mode support make the product comfortable to use across devices.
+
+</ProjectCaseStudyLayout>

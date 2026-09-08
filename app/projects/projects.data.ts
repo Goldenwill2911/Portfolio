@@ -11,6 +11,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+  slug: "finvoice-ai",
+  title: "Finvoice AI",
+  summary:"An AI-powered invoicing platform that turns plain-text notes into structured invoices, generates payment reminders, tracks payment status, and presents revenue insights through a clear financial dashboard.",
+  tags: ["React", "Node.js", "MongoDB", "Gemini AI"],
+  marqueeThumbnailSrc: "/projects/finvoice-ai/screen-1-marquee0.png",
+  thumbnailSrc: "/projects/finvoice-ai/screen-01.png",
+  thumbnailAlt: "Finvoice AI invoicing and financial dashboard",
+  },
+  {
     slug: "senior-helper",
     title: "Senior Helper",
     summary: "Full-stack web app that helps older adults and caregivers coordinate appointments, stay connected, and build online safety skills.",
